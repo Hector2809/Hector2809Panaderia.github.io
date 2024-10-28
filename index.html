@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería La Desesperanza - Inventario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inventario de la Panadería La Desesperanza</h1>
+    </header>
+
+    <main>
+        <section id="agregarProducto">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="formAgregarProducto">
+                <label for="nombreProducto">Nombre del Producto:</label>
+                <input id="nombreProducto" type="text" placeholder="Nombre del producto" required>
+
+                <label for="precioProducto">Precio:</label>
+                <input id="precioProducto" type="number" step="0.01" placeholder="Precio" required>
+
+                <label for="cantidadProducto">Cantidad:</label>
+                <input id="cantidadProducto" type="number" placeholder="Cantidad" required>
+
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+
+        <section id="inventario">
+            <h2>Inventario de Productos</h2>
+            <table id="tablaProductos">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Alterar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

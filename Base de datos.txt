@@ -1,0 +1,63 @@
+CREATE DATABASE panaderia_desesperanza;
+
+USE panaderia_desesperanza;
+
+
+-- Tabla de categorías  --
+CREATE TABLE Categorias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
+);
+
+
+
+-- Tabla de productos --
+CREATE TABLE Productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10, 2) NOT NULL,
+    categoria_id INT,
+    FOREIGN KEY (categoria_id) REFERENCES Categorias(id)
+);
+
+
+
+-- Tabla de inventario --
+CREATE TABLE Inventario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    producto_id INT,
+    cantidad INT NOT NULL,
+    fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (producto_id) REFERENCES Productos(id)
+);
+
+
+
+-- Tablas adicionales para futuras expansiones --
+CREATE TABLE Clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    direccion TEXT,
+    telefono VARCHAR(15),
+    email VARCHAR(100)
+);
+
+
+
+CREATE TABLE Pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT,
+    fecha_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (cliente_id) REFERENCES Clientes(id)
+);
+
+
+
+CREATE TABLE Facturas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pedido_id INT,
+    total DECIMAL(10, 2),
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (pedido_id) REFERENCES Pedidos(id)
+);

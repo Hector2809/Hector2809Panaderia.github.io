@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(72, 2, 84);
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e20101;
+    border-radius: 15px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#agregarProducto {
+    background-color: rgb(222, 61, 3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#agregarProducto h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: #412929;
+}
+
+#formAgregarProducto label {
+    font-weight: bold;
+    color: #412929;
+}
+
+#formAgregarProducto input,
+#formAgregarProducto button {
+    margin-top: 10px;
+}
+
+#formAgregarProducto button {
+    width: 100%;
+    background-color: #23023b;
+    color: blueviolet;
+    border: none;
+    font-weight: bold;
+}
+
+#formAgregarProducto button:hover {
+    background-color: #218838;
+}
+
+#inventario {
+    background-color: rgb(222, 61, 3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#inventario h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: #9ea5ab;
+}
+
+#tablaProductos th,
+#tablaProductos td {
+    padding: 20px 150px;
+    vertical-align: middle;
+    background-color: #23023b;
+    color: blueviolet;
+}
+
+#tablaProductos th {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+}
+
+#tablaProductos tr {
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
+}
+
+#tablaProductos tbody tr:hover {
+    background-color: #f1f3f5;
+    text-align: center;
+}
+
+#tablaProductos tbody th:hover {
+    background-color: #f1f3f5;
+    text-align: center;
+}
+
+.edit-btn {
+    background-color: #103503;
+    color: #11da3d;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background-color: #480209;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #480209;
+}
